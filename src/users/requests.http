@@ -1,0 +1,64 @@
+### Create a new user
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+    "email": "asdsfa@asdf.com",
+    "password" : "asdf"
+}
+
+### Sign in as an existing user
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "asdsfa@asdf.com",
+    "password" : "asdf"
+}
+
+### Who Am I?
+GET http://localhost:3000/auth/whoami
+
+### Sign out
+POST http://localhost:3000/auth/signout
+
+
+### List all messages
+GET http://localhost:3000
+
+### Find a particular user with a given ID
+GET http://localhost:3000/auth/5
+
+
+### Find all users with a given email
+GET http://localhost:3000/auth?email=periac@email.com
+
+
+### List all users
+GET http://localhost:3000/auth/all
+
+### Delete user with a specific Id
+DELETE http://localhost:3000/auth/3
+
+### Update a new user
+PATCH http://localhost:3000/auth/3
+content-type: application/json
+
+{
+    "email": "aaaaaa@email.com",
+    "password" : "secret"
+}
+
+#############################################
+#### Experiments with Sessions and Color ####
+#############################################
+
+### Set a Color
+GET http://localhost:3000/auth/color/:blue
+
+### Get the color
+GET http://localhost:3000/auth/colors
+
+
+
+
